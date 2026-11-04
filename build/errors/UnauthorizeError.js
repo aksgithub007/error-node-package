@@ -1,5 +1,8 @@
-import { CustomError } from "./CustomError";
-export class UnauthorizeError extends CustomError {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnauthorizeError = void 0;
+const CustomError_1 = require("./CustomError");
+class UnauthorizeError extends CustomError_1.CustomError {
     statusCode = 401;
     constructor(message = "Unauthorized User") {
         super(message);
@@ -9,3 +12,4 @@ export class UnauthorizeError extends CustomError {
         return [{ message: this.message }];
     }
 }
+exports.UnauthorizeError = UnauthorizeError;
